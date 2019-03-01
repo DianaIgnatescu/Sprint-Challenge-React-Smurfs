@@ -10,11 +10,12 @@ class Smurfs extends Component {
   }
 
   render() {
+    const { smurfs } = this.props;
     return (
       <div className="Smurfs">
         <h1>Smurf Village</h1>
         <ul>
-          {this.props.smurfs.map(smurf => {
+          {smurfs.map(smurf => {
             return (
               <Smurf
                 name={smurf.name}
@@ -42,6 +43,7 @@ Smurfs.propTypes = {
     age: PropTypes.string.isRequired,
     height: PropTypes.string.isRequired
   })).isRequired,
+  getSmurfs: PropTypes.func.isRequired,
 };
 
 export default Smurfs;
