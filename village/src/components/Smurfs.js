@@ -10,7 +10,7 @@ class Smurfs extends Component {
   }
 
   render() {
-    const { smurfs } = this.props;
+    const { smurfs, banSmurf } = this.props;
     return (
       <div className="Smurfs">
         <h1>Smurf Village</h1>
@@ -23,6 +23,7 @@ class Smurfs extends Component {
                 age={smurf.age}
                 height={smurf.height}
                 key={`${smurf.id}-${smurf.name}`}
+                banSmurf={banSmurf}
               />
             );
           })}
@@ -44,6 +45,7 @@ Smurfs.propTypes = {
     height: PropTypes.string.isRequired
   })).isRequired,
   getSmurfs: PropTypes.func.isRequired,
+  banSmurf: PropTypes.func.isRequired,
 };
 
 export default Smurfs;

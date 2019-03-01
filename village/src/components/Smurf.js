@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Smurf = props => {
-  const { name, height, age } = props;
+  const { name, height, age, id, banSmurf } = props;
   return (
     <div className="Smurf">
       <div className="smurf-name">
@@ -13,7 +13,7 @@ const Smurf = props => {
         <p>{age} smurf years old</p>
       </div>
       <div className="requests">
-        <button type="button" className="delete">Ban from Village</button>
+        <button className="delete" onClick={(e) => {banSmurf(e, id)}}>Ban from Village</button>
       </div>
     </div>
   );
@@ -23,6 +23,7 @@ Smurf.propTypes = {
   name: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
   age: PropTypes.string.isRequired,
+  banSmurf: PropTypes.func.isRequired,
 };
 
 export default Smurf;

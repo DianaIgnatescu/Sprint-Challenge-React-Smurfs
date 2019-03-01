@@ -14,6 +14,7 @@ class App extends Component {
       smurfs: [],
     };
     this.getSmurfs = this.getSmurfs.bind(this);
+    this.banSmurf = this.banSmurf.bind(this);
   }
 
   getSmurfs() {
@@ -26,6 +27,15 @@ class App extends Component {
           height: smurf.height,
         }));
         this.setState({ smurfs });
+      })
+      .catch(err => console.log(err));
+  }
+
+  banSmurf(e, smurfId) {
+    e.preventDefault();
+    axios.delete(`http://localhost:3333/smurfs/${smurfId}`)
+      .then(() => {
+        this.getSmurfs();
       })
       .catch(err => console.log(err));
   }
@@ -50,7 +60,7 @@ class App extends Component {
         <Route
           exact
           path="/smurfs"
-          render={props => <Smurfs {...props} smurfs={smurfs} getSmurfs={this.getSmurfs} />}
+          render={props => <Smurfs {...props} smurfs={smurfs} getSmurfs={this.getSmurfs} banSmurf={this.banSmurf} />}
         />
       </div>
     );
