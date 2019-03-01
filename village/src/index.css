@@ -52,7 +52,6 @@ strong {
 
 .App {
   background-image: linear-gradient(45deg,#4FA8ED, #5373EB);
-  /* height: 100vh; */
 }
 
 .Smurfs {
@@ -104,6 +103,19 @@ button:hover {
   background: #f4da78;
 }
 
+button.delete {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  background: #4FA8ED;
+  height: 60px;
+  color: white;
+}
+
+button.delete:hover {
+  background :#ff5b61;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -124,20 +136,20 @@ h3 {
   /* padding: 20px; */
   margin: 10px;
   border-radius: 5px;
+  border: 1px solid white;
   height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding-left: 30px; */
 }
-
 .smurf-name {
   background: #F2D460;
+  border-radius: 5px 5px 0 0;
   text-align: center;
   height: 80px;
 }
 
 .smurf-details {
   padding: 20px 30px;
-  height: 130px;
+  height: 100px;
 }

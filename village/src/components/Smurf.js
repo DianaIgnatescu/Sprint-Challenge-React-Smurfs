@@ -12,6 +12,9 @@ const Smurf = props => {
         <strong>{height} tall</strong>
         <p>{age} smurf years old</p>
       </div>
+      <div className="requests">
+        <button type="button" className="delete">Ban from Village</button>
+      </div>
     </div>
   );
 };
