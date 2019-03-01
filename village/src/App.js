@@ -20,7 +20,7 @@ class App extends Component {
         const smurfs = response.data.map(smurf => ({
           id: smurf.id,
           name: smurf.name,
-          age: smurf.age,
+          age: String(smurf.age),
           height: smurf.height,
         }));
         this.setState({ smurfs });
