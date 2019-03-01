@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Smurf from './Smurf';
 
 class Smurfs extends Component {
+  componentDidMount() {
+    const { getSmurfs } = this.props;
+    getSmurfs();
+  }
+
   render() {
     return (
       <div className="Smurfs">
@@ -26,7 +32,16 @@ class Smurfs extends Component {
 }
 
 Smurf.defaultProps = {
- smurfs: [],
+  smurfs: [],
+};
+
+Smurfs.propTypes = {
+  smurfs: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    age: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired
+  })).isRequired,
 };
 
 export default Smurfs;
