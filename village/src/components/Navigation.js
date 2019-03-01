@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
     <nav>
-      <Link to="/">Smurfs</Link>
-      <Link to="/smurf-form">Add Smurf</Link>
+      <NavLink to="/">Smurfs</NavLink>
+      <NavLink to="/smurf-form">Add Smurf</NavLink>
     </nav>
   );
 };
