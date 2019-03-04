@@ -2,4 +2,157 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #5373EB;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 100%;
+}
+
+.navigation {
+  background:#F2D460;
+  padding: 20px;
+  border-bottom: 1px solid #303233;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav a {
+  color: #303233;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  font-size: 36px;
+}
+
+p {
+  color: #303233;
+  font-size: 16px;
+}
+
+strong {
+  color: #303233;
+  font-size: 16px;
+}
+
+
+
+.Smurfs {
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.SmurfForm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+  height: 100vh;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  margin: 60px;
+}
+
+input {
+  width: 200px;
+  margin-right: 10px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #F2D460;
+  padding: 10px;
+  color: #303233;
+  font-size: 14px;
+}
+
+input::placeholder {
+  font-size: 14px;
+}
+
+button {
+  background: #F2D460;
+  color: #303233;
+  width: 200px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #f4da78;
+}
+
+button.delete {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  background: #4FA8ED;
+  height: 60px;
+  color: white;
+}
+
+button.delete:hover {
+  background :#ff5b61;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+h3 {
+  color: #303233;
+  padding-top: 5px;
+  font-size: 24px;
+}
+
+.Smurf {
+  background: #FFFFFF;
+  width: 300px;
+  /* padding: 20px; */
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.smurf-name {
+  background: #F2D460;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  height: 80px;
+}
+
+.smurf-details {
+  padding: 20px 30px;
+  height: 100px;
 }
